@@ -14,7 +14,6 @@ class ExampleJob(ThreadedJobBase):
 
         self._is_running = True
         self._last_run = time.time()
-        self.log_job_start()
 
         try:
             print(f"[{self.name()}] Starting threaded job...")

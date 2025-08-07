@@ -14,11 +14,6 @@ class JobBase:
     def is_threaded(self) -> bool:
         raise NotImplementedError
 
-    def log_job_start(self):
-        now = datetime.now()
-        timestamp = now.strftime("%H:%M:%S.%f")[:-5]  # HH:MM:SS.t
-        print(f"[{self.name()}] PING at {timestamp}")
-
 class ThreadedJobBase(JobBase):
     def is_threaded(self):
         return True
